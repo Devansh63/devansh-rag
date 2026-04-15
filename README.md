@@ -1,90 +1,104 @@
-# devansh-rag
+# Devansh RAG — Ask Me Anything
 
-Personal RAG chatbot that answers questions about me (Devansh Agrawal) using a **Retrieval-Augmented Generation** pipeline. Powers the AI assistant embedded at devanshagrawal.com.
+This is the backend for the "Ask Devansh" chatbot on my portfolio. You ask it something about me, it retrieves the most relevant chunks from my bio and resume, and Gemini generates a response in my voice.
 
-Built with Google Gemini, ChromaDB, and Flask. Deployed on Render.
+Built with Flask, ChromaDB, and Google Gemini.
 
----
+## How it works
 
-## How It Works
+Standard RAG setup:
 
-1. **Ingest** — `data/about_me.md` is split into chunks and embedded with Gemini `gemini-embedding-001`.
-2. **Store** — Chunks and embeddings are persisted in ChromaDB.
-3. **Retrieve** — At query time, the question is embedded and the top 5 semantically similar chunks are fetched.
-4. **Generate** — Those chunks are passed as context to Gemini 2.5 Flash, which answers as me.
+1. `data/about_me.md` gets chunked into ~600 character pieces and embedded using Gemini's embedding model
+2. The embeddings get stored in a local ChromaDB collection
+3. When someone sends a question, it gets embedded and the top 5 most similar chunks are retrieved
+4. Those chunks are passed as context to Gemini 2.5 Flash, which generates a response as if it's me
 
----
+If something isn't in the knowledge base, the bot says so rather than making things up.
 
 ## Stack
 
-- **LLM**: Google Gemini 2.5 Flash
-- **Embeddings**: Gemini `gemini-embedding-001`
-- **Vector store**: ChromaDB
-- **Backend**: Flask + Gunicorn
-- **Deploy**: Docker on Render
-- **Rate limiting**: flask-limiter (10 req/min on `/api/chat`)
-- **CORS**: flask-cors (controlled via `ALLOWED_ORIGIN` env var)
+- **Flask** for the web server and API
+- **ChromaDB** for vector storage
+- **Google Gemini** for both embedding (`gemini-embedding-001`) and generation (`gemini-2.5-flash`)
+- **Docker** for deployment on Render
+- **flask-cors** and **flask-limiter** for CORS handling and basic rate limiting
 
----
+## Running locally
 
-## Running Locally
+You'll need Python 3.11+ and a Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 
 ```bash
 git clone https://github.com/Devansh63/devansh-rag.git
 cd devansh-rag
 
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 cp .env.example .env
-# Add your GEMINI_API_KEY to .env
+# edit .env and paste in your GEMINI_API_KEY
 
-python ingest.py
-python app.py
-# Open http://localhost:5000
+python ingest.py    # chunks and embeds about_me.md into ChromaDB
+python app.py       # starts Flask on port 5000
 ```
 
----
+Open http://localhost:5000 and start asking questions.
 
 ## Deploying to Render
 
-1. Push this repo to GitHub
-2. Go to [render.com](https://render.com), create a new **Web Service**, connect this repo
-3. Render reads `render.yaml` automatically
-4. Set `GEMINI_API_KEY` in the Render dashboard (Environment tab)
-5. Set `ALLOWED_ORIGIN` to your Netlify URL (e.g. `https://devanshagrawal.netlify.app`)
-6. Deploy — first boot takes ~60s while `ingest.py` builds the ChromaDB index
+1. Fork this repo
+2. Create a new **Web Service** on [render.com](https://render.com) and connect your fork
+3. Set the runtime to **Docker** — the `Dockerfile` handles everything
+4. Add `GEMINI_API_KEY` as an environment variable in the service settings
+5. Hit deploy
 
----
+The `Dockerfile` runs `ingest.py` at startup, so the vector index gets rebuilt automatically. On the free plan, this adds 30-60 seconds to cold start times, which is fine for a portfolio chatbot.
 
-## Updating the Knowledge Base
+After deploying, update `RAG_API_URL` in your portfolio's `index.html` to point to your Render URL, and set `ALLOWED_ORIGIN` in Render's environment variables to your portfolio domain.
 
-1. Edit `data/about_me.md`
-2. Run `python ingest.py` locally to verify
-3. Push — Render redeploys and rebuilds the index automatically
+## Customizing with your own data
 
----
+This is designed to be forked and repurposed. The main things to change:
 
-## Project Structure
+1. **Replace `data/about_me.md`** with your own info. Use clear section headers — it helps with retrieval quality.
+
+2. **Re-run ingestion** to rebuild the index:
+   ```bash
+   python ingest.py
+   ```
+
+3. **Update the system prompt** in `rag/pipeline.py` to change the bot's name or persona.
+
+4. **Update the sidebar** in `templates/index.html` with your own name and links.
+
+## Project structure
 
 ```
 devansh-rag/
-├── data/about_me.md      # Knowledge base
+├── data/
+│   └── about_me.md          # knowledge base — edit this to customize
 ├── rag/
-│   ├── embedder.py       # Gemini embedding wrapper
-│   ├── vector_store.py   # ChromaDB wrapper
-│   └── pipeline.py       # RAG pipeline
+│   ├── embedder.py          # Gemini embedding wrapper
+│   ├── vector_store.py      # ChromaDB wrapper
+│   └── pipeline.py          # RAG pipeline (retrieve + generate)
 ├── static/
 │   ├── chat.js
-│   └── style.css
-├── templates/index.html  # Standalone chat UI
-├── app.py                # Flask server
-├── ingest.py             # Data ingestion
+│   ├── style.css
+│   └── images/              # drop profile.jpg here (gitignored)
+├── templates/
+│   └── index.html
+├── chroma_db/               # auto-created by ingest.py, gitignored
+├── app.py                   # Flask server
+├── ingest.py                # ingestion script
 ├── Dockerfile
-├── render.yaml           # Render deploy config
-└── requirements.txt
+├── render.yaml
+├── requirements.txt
+└── .env.example
 ```
+
+## Getting a Gemini API key
+
+Go to [aistudio.google.com](https://aistudio.google.com/app/apikey), sign in with your Google account, and create a free API key. The free tier is plenty for a personal chatbot.
 
 ---
 

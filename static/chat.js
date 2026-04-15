@@ -1,8 +1,7 @@
-/* =========================================================
-   Ask Devansh — Chat UI
-   ========================================================= */
+/* Ask Devansh — Chat UI */
 'use strict';
 
+// ---- DOM refs ----
 const chatWindow = document.getElementById('chat-window');
 const msgInput   = document.getElementById('message-input');
 const sendBtn    = document.getElementById('send-btn');
@@ -10,10 +9,11 @@ const suggWrap   = document.getElementById('suggestions-wrap');
 const suggCards  = document.getElementById('suggestion-cards');
 const clearBtn   = document.getElementById('clear-btn');
 
-let isWaiting  = false;
-let typingEl   = null;
-let suggHidden = false;
+let isWaiting    = false;
+let typingEl     = null;
+let suggHidden   = false;
 
+// -- Utilities --
 function nowTime() {
   return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
@@ -24,6 +24,7 @@ function scrollBottom() {
   });
 }
 
+// Build a bot avatar element (tries to show profile photo, falls back to "DA")
 function makeBotAvatar() {
   const av = document.createElement('div');
   av.className = 'msg-avatar bot-avatar-msg';
@@ -43,93 +44,149 @@ function makeUserAvatar() {
   return av;
 }
 
+// -- Markdown-lite renderer (bold, italic, lists, paragraphs) --
 function formatText(raw) {
   if (!raw) return '';
+
+  // Escape HTML
   let s = raw
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+
+  // Inline: bold and italic
   s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+  // Process line by line
   const lines = s.split('\n');
   const out = [];
   let inUl = false, inOl = false;
+
   for (const line of lines) {
+    // Unordered list (- or •)
     if (/^[-•]\s/.test(line)) {
-      if (!inUl) { if (inOl) { out.push('</ol>'); inOl = false; } out.push('<ul>'); inUl = true; }
+      if (!inUl) {
+        if (inOl) { out.push('</ol>'); inOl = false; }
+        out.push('<ul>');
+        inUl = true;
+      }
       out.push('<li>' + line.replace(/^[-•]\s/, '') + '</li>');
       continue;
     }
+    // Ordered list (1. 2. ...)
     if (/^\d+\.\s/.test(line)) {
-      if (!inOl) { if (inUl) { out.push('</ul>'); inUl = false; } out.push('<ol>'); inOl = true; }
+      if (!inOl) {
+        if (inUl) { out.push('</ul>'); inUl = false; }
+        out.push('<ol>');
+        inOl = true;
+      }
       out.push('<li>' + line.replace(/^\d+\.\s/, '') + '</li>');
       continue;
     }
+    // Close open lists
     if (inUl) { out.push('</ul>'); inUl = false; }
     if (inOl) { out.push('</ol>'); inOl = false; }
+
     if (line.trim() === '') out.push('<br/>');
     else out.push('<p>' + line + '</p>');
   }
   if (inUl) out.push('</ul>');
   if (inOl) out.push('</ol>');
+
   return out.join('');
 }
 
+// -- Append a message bubble to the chat window --
 function appendMessage(role, text, isWelcome = false) {
   const isBot = role !== 'user';
+
+  // Outer group
   const group = document.createElement('div');
-  group.className = ['message-group', isBot ? 'bot-group' : 'user-group',
-    role === 'error' ? 'error-group' : '', isWelcome ? 'welcome-group' : ''].filter(Boolean).join(' ');
+  group.className = [
+    'message-group',
+    isBot ? 'bot-group' : 'user-group',
+    role === 'error' ? 'error-group' : '',
+    isWelcome ? 'welcome-group' : '',
+  ].filter(Boolean).join(' ');
+
+  // Centered inner row
   const inner = document.createElement('div');
   inner.className = 'msg-inner';
+
+  // Avatar
   const avatar = isBot ? makeBotAvatar() : makeUserAvatar();
+
+  // Body
   const body = document.createElement('div');
   body.className = 'msg-body';
+
+  // Sender label
   const sender = document.createElement('p');
   sender.className = 'msg-sender';
   sender.textContent = isBot ? 'Devansh AI' : 'You';
+
+  // Text content
   const textEl = document.createElement('div');
   textEl.className = 'msg-text';
   textEl.innerHTML = formatText(text);
+
+  // Meta row (time + copy)
   const meta = document.createElement('div');
   meta.className = 'msg-meta';
+
   const time = document.createElement('span');
   time.className = 'msg-time';
   time.textContent = nowTime();
   meta.appendChild(time);
+
+  // Copy button — only for bot messages
   if (isBot) {
     const copy = document.createElement('button');
     copy.className = 'copy-btn';
-    const iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+    const iconSVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+    </svg>`;
     copy.innerHTML = iconSVG + ' Copy';
     copy.title = 'Copy to clipboard';
     copy.addEventListener('click', () => {
       navigator.clipboard.writeText(text).then(() => {
         copy.textContent = '✓ Copied!';
         copy.classList.add('copied');
-        setTimeout(() => { copy.innerHTML = iconSVG + ' Copy'; copy.classList.remove('copied'); }, 2200);
+        setTimeout(() => {
+          copy.innerHTML = iconSVG + ' Copy';
+          copy.classList.remove('copied');
+        }, 2200);
       }).catch(() => {});
     });
     meta.appendChild(copy);
   }
+
   body.appendChild(sender);
   body.appendChild(textEl);
   body.appendChild(meta);
+
   inner.appendChild(avatar);
   inner.appendChild(body);
   group.appendChild(inner);
   chatWindow.appendChild(group);
+
   scrollBottom();
   return group;
 }
 
+// -- Typing indicator --
 function showTyping() {
   if (typingEl) return;
+
   const group = document.createElement('div');
   group.className = 'typing-group';
+
   const inner = document.createElement('div');
   inner.className = 'typing-inner';
+
   inner.appendChild(makeBotAvatar());
+
   const bubble = document.createElement('div');
   bubble.className = 'typing-bubble';
   for (let i = 0; i < 3; i++) {
@@ -148,52 +205,57 @@ function hideTyping() {
   if (typingEl) { typingEl.remove(); typingEl = null; }
 }
 
+// -- Send message --
 function setWaiting(on) {
   isWaiting = on;
   msgInput.disabled = on;
   sendBtn.disabled = on;
   sendBtn.classList.toggle('loading', on);
-  if (!on) msgInput.focus();
+  if (!on) { msgInput.focus(); }
 }
 
 async function sendMessage() {
   if (isWaiting) return;
   const text = msgInput.value.trim();
   if (!text) return;
+
   msgInput.value = '';
   msgInput.style.height = 'auto';
+
   hideSuggestions();
   appendMessage('user', text);
   setWaiting(true);
   showTyping();
+
   try {
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: text }),
     });
+
     hideTyping();
-    if (res.status === 429) {
-      appendMessage('error', "You're sending messages a bit fast — wait a few seconds and try again.");
-      return;
-    }
+
     if (!res.ok) {
       let err = 'Something went wrong. Please try again.';
       try { const d = await res.json(); if (d.error) err = d.error; } catch (_) {}
       appendMessage('error', err);
       return;
     }
+
     const data = await res.json();
-    appendMessage('assistant', data.response || 'Could not generate a response. Please try again.');
+    appendMessage('assistant', data.response || 'I could not generate a response. Please try again.');
+
   } catch (e) {
     hideTyping();
-    appendMessage('error', 'Connection error — make sure the Flask server is running and refresh.');
+    appendMessage('error', 'Connection error — make sure the Flask server is running (`python app.py`) and refresh.');
     console.error(e);
   } finally {
     setWaiting(false);
   }
 }
 
+// -- Suggested questions --
 const DEFAULT_QUESTIONS = [
   "Where did you grow up?",
   "What are you studying at UIUC?",
@@ -244,15 +306,22 @@ function renderSuggestions(questions) {
 async function loadSuggestions() {
   let questions = DEFAULT_QUESTIONS;
   try {
-    const res = await fetch('/api/suggest', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({}) });
+    const res = await fetch('/api/suggest', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({}),
+    });
     if (res.ok) {
       const d = await res.json();
       if (Array.isArray(d.questions) && d.questions.length > 0) questions = d.questions;
     }
-  } catch (_) {}
+  } catch (_) {
+    // use defaults silently
+  }
   renderSuggestions(questions);
 }
 
+// -- Clear chat --
 function clearChat() {
   chatWindow.innerHTML = '';
   typingEl = null;
@@ -260,19 +329,23 @@ function clearChat() {
   showWelcome();
 }
 
+// -- Auto-resize textarea as user types --
 function autoResize() {
   msgInput.style.height = 'auto';
   msgInput.style.height = Math.min(msgInput.scrollHeight, 150) + 'px';
 }
 
+// -- Welcome message --
 function showWelcome() {
   const msg =
     "Hey! I'm an AI assistant built to answer questions about **Devansh Agrawal**.\n\n" +
-    "I run on a RAG pipeline — I retrieve relevant facts from Devansh's resume, research history, and personal bio, then generate grounded answers using Google Gemini.\n\n" +
-    "Ask me anything: his background growing up in **Kathmandu, Nepal**, his MCS at **UIUC** (GPA 4.0), his work at **OPEXUS** building government software used by 200+ agencies, the **NeuroDrone** capstone, his research in medical imaging and steganography, or anything else. What would you like to know?";
+    "I run on a RAG pipeline — I retrieve relevant facts from Devansh's resume, LinkedIn, research history, and personal bio, then generate grounded answers using Google Gemini.\n\n" +
+    "Ask me anything: his background growing up in **Kathmandu, Nepal**, his current MCS program at **UIUC** (GPA 4.0), his work at **OPEXUS** building government software, the **NeuroDrone** capstone project, his research in medical imaging and steganography, the **Khalti** payment app he worked on in Nepal, or his technical skills. What would you like to know?";
+
   appendMessage('assistant', msg, true);
 }
 
+// -- Event listeners --
 msgInput.addEventListener('keydown', e => {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
 });
@@ -280,6 +353,7 @@ msgInput.addEventListener('input', autoResize);
 sendBtn.addEventListener('click', sendMessage);
 clearBtn && clearBtn.addEventListener('click', clearChat);
 
+// -- Init --
 document.addEventListener('DOMContentLoaded', () => {
   showWelcome();
   loadSuggestions();
