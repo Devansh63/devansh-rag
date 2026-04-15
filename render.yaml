@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: devansh-rag
+    runtime: docker
+    region: oregon
+    plan: free
+
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+
+      # Set to your Netlify domain after deploying, e.g. https://devanshagrawal.netlify.app
+      - key: ALLOWED_ORIGIN
+        value: "*"
+
+      - key: RATE_LIMIT
+        value: "20 per minute"
+
+      - key: PORT
+        value: "10000"
+
+    healthCheckPath: /health

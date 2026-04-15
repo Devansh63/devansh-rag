@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment / Secrets
+.env
+*.env
+!.env.example
+
+# ChromaDB — binary files, rebuilt by ingest.py on deploy
+chroma_db/
+
+# Profile photo
+static/images/profile.jpg
+static/images/profile.jpeg
+static/images/profile.png
+static/images/profile.webp
+
+# macOS
+.DS_Store
+._*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Logs
+*.log
+logs/
+
+# Misc
+*.bak
+*.tmp
