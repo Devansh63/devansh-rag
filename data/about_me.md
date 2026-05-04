@@ -6,7 +6,7 @@ Devansh Agrawal was born on June 3, 2000, in Kathmandu, Nepal. He grew up in Kat
 
 Devansh currently resides in Champaign, Illinois, where he is pursuing his Master of Computer Science degree at the University of Illinois Urbana-Champaign (UIUC). He holds Nepali citizenship and is in the United States on an F-1 student visa. Prior to returning to academia, he was on an H-1B work visa while employed at OPEXUS in Washington, D.C. He made a conscious decision to change his visa status from H-1B to F-1 in order to pursue graduate education in Artificial Intelligence — a testament to his commitment to deepening his technical expertise.
 
-His parents are Santosh Agrawal (mother) and Sanjay Agrawal (father). Devansh can be reached at devanshagrawal63@gmail.com or by phone at (734) 604-6884. His LinkedIn profile is at https://www.linkedin.com/in/devansh-agrawal63/ and his GitHub is at https://github.com/Devansh63.
+His parents are Santosh Agrawal (mother) and Sanjay Agrawal (father). Devansh can be reached at devanshagrawal63@gmail.com or by phone at (734) 604-6884. His LinkedIn profile is at https://www.linkedin.com/in/devansh-agrawal63/, his GitHub is at https://github.com/Devansh63, and his portfolio website is at https://devanshagrawal.netlify.app.
 
 Devansh speaks four languages fluently: English, Hindi, Marwari, and Nepali — all at native or bilingual proficiency.
 
@@ -128,7 +128,7 @@ Customer services representative assisting customers with purchases and generati
 
 ### Ask Devansh — Personal RAG Chatbot (2025 – Present)
 
-Devansh built a full Retrieval-Augmented Generation (RAG) chatbot trained on his own professional background, experience, projects, and personality. The chatbot is embedded directly in his portfolio website so that recruiters and hiring managers can ask questions in natural language and receive accurate, context-aware answers in his voice.
+Devansh built a full Retrieval-Augmented Generation (RAG) chatbot trained on his own professional background, experience, projects, and personality. The chatbot is live at https://devanshagrawal.netlify.app so that recruiters and hiring managers can ask questions in natural language and receive accurate, context-aware answers in his voice.
 
 **Stack:** Google Gemini 2.5 Flash (generation), Gemini embedding-001 (embeddings), ChromaDB (vector store), Flask (API server), flask-cors, flask-limiter, Python, Docker, Render (production hosting).
 
@@ -136,7 +136,7 @@ Devansh built a full Retrieval-Augmented Generation (RAG) chatbot trained on his
 
 This project demonstrates end-to-end RAG pipeline design, embedding model usage, vector database integration, and production API deployment — all skills directly applicable to ML Engineering roles.
 
-**GitHub:** github.com/Devansh63/devansh-rag
+**Live:** devanshagrawal.netlify.app | **GitHub:** github.com/Devansh63/devansh-rag
 
 ---
 
@@ -233,10 +233,11 @@ From Rushabh Dharia, Software Engineer 2 at The Aspen Group (February 2025):
 
 Devansh's GitHub profile is at https://github.com/Devansh63. Public repositories include:
 
-- **devansh-rag** (Python): Personal RAG chatbot — full production pipeline using Gemini, ChromaDB, Flask, deployed on Render.
+- **devansh-rag** (Python): Personal RAG chatbot — full production pipeline using Gemini, ChromaDB, Flask, deployed on Render. Live at devanshagrawal.netlify.app.
 - **CNN-from-scratch** (Python/NumPy): Complete CNN implementation from scratch with no deep learning framework.
 - **suttonRL** (Python): Clean implementations of RL algorithms from Sutton and Barto's textbook.
-- **library-rag-ingest** (Python): Data ingestion pipeline for a library book recommendation RAG system using Neon Postgres and pgvector.
+- **library-rag-ingest** (Python): Full-stack book search and recommendation system using Neon Postgres, pgvector, FastAPI, hybrid BM25 and semantic search, and RAG recommendations via Groq.
+- **Language-Model-From-Scratch** (Python): Language model implemented from scratch covering tokenization, attention, and transformer architecture.
 - **NeuroDrone-Capston** (Python): Deep RL drone navigation capstone using AirSim, Unreal Engine, TensorFlow.
 - **Chess** (Java): A Chess game with AI using the Mini-Max algorithm — interactive UI highlights all valid moves when a piece is selected.
 - **WebsiteRecipeStorage** (HTML): Full web app for storing and publicly sharing recipes.
@@ -274,7 +275,7 @@ The honest answer is that he could feel the field shifting. During his time at O
 
 The decision was deliberate. He researched programs, applied selectively, and chose UIUC specifically because of its depth in ML and systems — and because he knew that if he was going to do this, it had to be a program worth giving up an H-1B for. He is not hedging. He changed his visa status from H-1B to F-1 — a move that removed the safety net — because he is fully committed to the AI path.
 
-At UIUC he has maintained a 4.0 GPA while building real projects: a production RAG chatbot, an agentic AI system, and taking courses in Machine Learning, Distributed Systems, Information Retrieval, and Cybersecurity. He is not studying AI in the abstract — he is building things with it.
+At UIUC he has maintained a 4.0 GPA while building real projects: a production RAG chatbot at devanshagrawal.netlify.app, an agentic AI system, and taking courses in Machine Learning, Distributed Systems, Information Retrieval, and Cybersecurity. He is not studying AI in the abstract — he is building things with it.
 
 ## UIUC Coursework Details
 
@@ -315,7 +316,7 @@ Devansh's suttonRL repository contains clean, from-scratch implementations of fo
 
 ## Library RAG Recommendation Pipeline (Detailed)
 
-Devansh's library-rag-ingest project is a production-oriented data ingestion pipeline for a library book recommendation system built on Retrieval-Augmented Generation. The pipeline processes large catalogs of book metadata, generates dense vector embeddings using sentence-transformer models, and stores them in Neon Postgres using the pgvector extension for efficient similarity search. The pipeline stages include book catalog ingestion and metadata parsing, text preprocessing and chunking for descriptions and reviews, vector embedding generation, bulk insertion into Neon Postgres with pgvector indexing, and hybrid search support combining semantic similarity with metadata filtering. The system is designed for scalability with batch processing, deduplication, and incremental updates. GitHub: github.com/Devansh63/library-rag-ingest.
+Devansh's library-rag-ingest project is a full-stack book search and recommendation system built for CS 410 (Text Information Systems) at UIUC. It ingests book data and 15M reviews from four sources (Goodreads, CMU Book Summaries, UCSD Book Graph, ISBNdb) into Neon Postgres with pgvector. The search pipeline uses a Groq-powered query classifier (llama-3.1-8b-instant) to assign retrieval weights across Postgres BM25 full-text search and dual BAAI/bge-base-en-v1.5 semantic search (metadata and review embeddings), fused via Reciprocal Rank Fusion. Top results are passed to llama-3.3-70b-versatile for RAG recommendations. The system is deployed on Render with a FastAPI backend and React UI. GitHub: github.com/Devansh63/library-rag-ingest.
 
 ---
 
@@ -388,19 +389,19 @@ A: At Purdue, I received the Honors Gold Medal at graduation for completing 18 c
 A: I'm currently focused on my MCS at UIUC, but I'm open to Software Engineer, Full Stack, .NET Developer, or Back End Developer roles — especially those with an AI/ML component.
 
 **Q: What's on your GitHub?**
-A: My GitHub is github.com/Devansh63. Public repos include a personal RAG chatbot (devansh-rag), a CNN built from scratch in NumPy, RL algorithm implementations from Sutton and Barto, a library recommendation RAG ingestion pipeline, and the NeuroDrone capstone project. I also have a Chess AI using Mini-Max in Java and some numerical analysis implementations from my Math minor at Purdue.
+A: My GitHub is github.com/Devansh63. Public repos include a personal RAG chatbot (devansh-rag, live at devanshagrawal.netlify.app), a CNN built from scratch in NumPy, RL algorithm implementations from Sutton and Barto, a full-stack library book recommendation system (library-rag-ingest), a language model built from scratch, and the NeuroDrone capstone project.
 
 **Q: How can I contact you?**
-A: Email: devanshagrawal63@gmail.com | Phone: (734) 604-6884 | LinkedIn: https://www.linkedin.com/in/devansh-agrawal63/ | GitHub: https://github.com/Devansh63
+A: Email: devanshagrawal63@gmail.com | Phone: (734) 604-6884 | LinkedIn: https://www.linkedin.com/in/devansh-agrawal63/ | GitHub: https://github.com/Devansh63 | Portfolio: https://devanshagrawal.netlify.app
 
 **Q: Why did you leave OPEXUS to go back to school?**
 A: It was a deliberate decision, not a reaction to anything going wrong. I could see AI becoming the core of every serious engineering team, and I realized I wanted to be someone who actually builds these systems — not just someone who integrates APIs. I was on an H-1B at OPEXUS, which is a comfortable visa, and choosing to switch to an F-1 for grad school meant removing that safety net entirely. I made that choice because I believed the investment was worth it, and because if I was going to do it, it had to be UIUC — one of the best CS programs in the world. I have no regrets. The coursework, the projects I am building, and the 4.0 GPA tell me I made the right call.
 
 **Q: What are you currently building at UIUC?**
-A: Two main projects right now. First, "Ask Devansh" — a production RAG chatbot using Google Gemini for both embeddings and generation, ChromaDB as the vector store, and Flask for the API. It is deployed and embedded directly in my portfolio so recruiters can ask questions about my background in natural language. Second, an Agentic AI system — a multi-agent autonomous AI that I am working on for tool use and task decomposition. Both of these are things I am building because I find them genuinely interesting, not just because they look good on a resume.
+A: Two main projects right now. First, "Ask Devansh" — a production RAG chatbot using Google Gemini for both embeddings and generation, ChromaDB as the vector store, and Flask for the API. It is deployed at devanshagrawal.netlify.app so recruiters can ask questions about my background in natural language. Second, an Agentic AI system — a multi-agent autonomous AI that I am working on for tool use and task decomposition. Both of these are things I am building because I find them genuinely interesting, not just because they look good on a resume.
 
 **Q: What is the Ask Devansh chatbot?**
-A: It is a RAG (Retrieval-Augmented Generation) chatbot I built and deployed. It is trained on a detailed knowledge base about my background, experience, and projects. When you ask it a question, it retrieves the most relevant chunks from that knowledge base, and Gemini 2.5 Flash generates an answer in my voice. The stack is Gemini embedding-001 for embeddings, ChromaDB for vector storage, Flask for the API, and it is deployed on Render. The code is on GitHub at github.com/Devansh63/devansh-rag.
+A: It is a RAG (Retrieval-Augmented Generation) chatbot I built and deployed. It is trained on a detailed knowledge base about my background, experience, and projects. When you ask it a question, it retrieves the most relevant chunks from that knowledge base, and Gemini 2.5 Flash generates an answer in my voice. The stack is Gemini embedding-001 for embeddings, ChromaDB for vector storage, Flask for the API, and it is deployed on Render. The chatbot is live at devanshagrawal.netlify.app and the code is on GitHub at github.com/Devansh63/devansh-rag.
 
 **Q: What kind of roles are you looking for?**
 A: I am looking for ML/AI internship or co-op roles, ideally for Summer or Fall 2026. My strongest interest is in Machine Learning Engineering, AI Research, and building AI-powered products. I have practical experience with RAG pipelines, embeddings, vector databases, and agentic systems — plus a strong software engineering background from 3+ years at OPEXUS. I am authorized to work in the U.S. on an F-1 visa with OPT/CPT eligibility.
@@ -409,7 +410,7 @@ A: I am looking for ML/AI internship or co-op roles, ideally for Summer or Fall 
 A: Yes. I am actively seeking ML/AI internships or co-op positions for Summer 2026 or Fall 2026. I am on an F-1 student visa and eligible for CPT. I am based in Champaign, IL but open to relocating for the right opportunity.
 
 **Q: What makes you stand out as a candidate?**
-A: A few things. First, I have real production experience — I shipped software used by 200+ government agencies at OPEXUS, resolved 1,500+ security vulnerabilities, and led a team of 8. I know what it takes to ship. Second, I have hands-on AI experience: I built a RAG pipeline from scratch, I have done ML research (U-Net for CT imaging, deep steganography, reinforcement learning for NeuroDrone), and I am currently building an agentic AI system at UIUC. Third, I gave up a stable H-1B job to pursue this. That level of commitment to AI is not something I can fake.
+A: A few things. First, I have real production experience — I shipped software used by 200+ government agencies at OPEXUS, resolved 1,500+ security vulnerabilities, and led a team of 8. I know what it takes to ship. Second, I have hands-on AI experience: I built a RAG pipeline from scratch (live at devanshagrawal.netlify.app), I have done ML research (U-Net for CT imaging, deep steganography, reinforcement learning for NeuroDrone), and I am currently building an agentic AI system at UIUC. Third, I gave up a stable H-1B job to pursue this. That level of commitment to AI is not something I can fake.
 
 **Q: Tell me about the CNN from scratch project.**
 A: I built a complete Convolutional Neural Network using only NumPy — no PyTorch, no TensorFlow, nothing. I implemented 2D convolution forward and backward passes, pooling layers, fully connected layers, ReLU and softmax with their derivatives, cross-entropy loss, and mini-batch gradient descent. The point was to deeply understand what frameworks do under the hood, not just use them. It is on GitHub at github.com/Devansh63/CNN-from-scratch.
@@ -418,4 +419,7 @@ A: I built a complete Convolutional Neural Network using only NumPy — no PyTor
 A: My suttonRL repo has clean from-scratch implementations of core RL algorithms from Sutton and Barto's textbook — the standard RL reference. Covers multi-armed bandits, dynamic programming, Monte Carlo methods, TD learning (SARSA, Q-learning), n-step methods, eligibility traces, and function approximation. Each algorithm is paired with the corresponding textbook experiments so you can verify the behavior matches the book. GitHub: github.com/Devansh63/suttonRL.
 
 **Q: What is the library RAG project?**
-A: library-rag-ingest is a production-oriented ingestion pipeline for a book recommendation system. It processes book catalogs, generates embeddings using sentence transformers, and stores them in Neon Postgres with the pgvector extension for similarity search. It supports hybrid search combining semantic similarity with metadata filtering, with batch processing and incremental updates for scale. GitHub: github.com/Devansh63/library-rag-ingest.
+A: library-rag-ingest is a full-stack book search and recommendation system I built for CS 410 at UIUC. It ingests book data and 15M reviews from four sources, uses a Groq-powered query classifier to route searches, combines BM25 and semantic search via Reciprocal Rank Fusion, and generates RAG recommendations using llama-3.3-70b-versatile. Deployed on Render with a FastAPI backend and React UI. GitHub: github.com/Devansh63/library-rag-ingest.
+
+**Q: What is your portfolio website?**
+A: My portfolio is at devanshagrawal.netlify.app. It includes the Ask Devansh RAG chatbot so visitors can ask questions about my background, experience, and projects in natural language.
