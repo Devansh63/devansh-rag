@@ -251,7 +251,7 @@ Devansh's GitHub profile is at https://github.com/Devansh63. Public repositories
 - **devansh-rag** (Python): Personal RAG chatbot — full production pipeline using Gemini, ChromaDB, Flask, deployed on Render. Live at devanshagrawal.netlify.app.
 - **CNN-from-scratch** (Python/NumPy): Complete CNN implementation from scratch with no deep learning framework.
 - **suttonRL** (Python): Clean implementations of RL algorithms from Sutton and Barto's textbook.
-- **library-rag-ingest** (Python): Full-stack book search and recommendation system using Neon Postgres, pgvector, FastAPI, hybrid BM25 and semantic search, and RAG recommendations via Groq.
+- **library-rag-ingest** (Python, CS 410 team project): Full-stack book search and recommendation system using Neon Postgres, pgvector, FastAPI, hybrid BM25 and semantic search, and RAG recommendations via Groq.
 - **Language-Model-From-Scratch** (Python): Language model implemented from scratch covering tokenization, attention, and transformer architecture.
 - **NeuroDrone-Capston** (Python): Deep RL drone navigation capstone using AirSim, Unreal Engine, TensorFlow.
 - **Chess** (Java): A Chess game with AI using the Mini-Max algorithm — interactive UI highlights all valid moves when a piece is selected.
@@ -290,7 +290,7 @@ The honest answer is that he could feel the field shifting. During his time at O
 
 The decision was deliberate. He researched programs, applied selectively, and chose UIUC specifically because of its depth in ML and systems — and because he knew that if he was going to do this, it had to be a program worth giving up an H-1B for. He is not hedging. He changed his visa status from H-1B to F-1 — a move that removed the safety net — because he is fully committed to the AI path.
 
-At UIUC he has maintained a 4.0 GPA while building real projects: a production RAG chatbot at devanshagrawal.netlify.app, an agentic AI system, and taking courses in Machine Learning, Distributed Systems, Information Retrieval, and Cybersecurity. He is not studying AI in the abstract — he is building things with it.
+At UIUC he has maintained a 4.0 GPA while building real projects: a production RAG chatbot at devanshagrawal.netlify.app, an agentic AI system, a GPU study of speculative decoding in vLLM, a study of how chatbots respond to user pushback, and taking courses in Machine Learning, Distributed Systems, Information Retrieval, and Cybersecurity. He is not studying AI in the abstract — he is building things with it.
 
 ## UIUC Coursework Details
 
@@ -333,7 +333,21 @@ Devansh's suttonRL repository contains clean, from-scratch implementations of fo
 
 ## Library RAG Recommendation Pipeline (Detailed)
 
-Devansh's library-rag-ingest project is a full-stack book search and recommendation system built for CS 410 (Text Information Systems) at UIUC. It ingests book data and 15M reviews from four sources (Goodreads, CMU Book Summaries, UCSD Book Graph, ISBNdb) into Neon Postgres with pgvector. The search pipeline uses a Groq-powered query classifier (llama-3.1-8b-instant) to assign retrieval weights across Postgres BM25 full-text search and dual BAAI/bge-base-en-v1.5 semantic search (metadata and review embeddings), fused via Reciprocal Rank Fusion. Top results are passed to llama-3.3-70b-versatile for RAG recommendations. The system is deployed on Render with a FastAPI backend and React UI. GitHub: github.com/Devansh63/library-rag-ingest.
+Devansh's library-rag-ingest project is a full-stack book search and recommendation system built with a team of five for CS 410 (Text Information Systems) at UIUC. It covers 962K books and 11M reader reviews from Goodreads, CMU Book Summaries and the UCSD Book Graph, enriched with ISBNdb, stored in Neon Postgres with pgvector. The search pipeline uses a Groq-powered query classifier (llama-3.1-8b-instant) to assign retrieval weights across Postgres BM25 full-text search and dual BAAI/bge-base-en-v1.5 semantic search (metadata and review embeddings), fused via Reciprocal Rank Fusion. Top results are passed to llama-3.3-70b-versatile for RAG recommendations. The system is deployed on Render with a FastAPI backend and React UI. GitHub: github.com/Devansh63/library-rag-ingest.
+
+---
+
+## Speculative Decoding Ladder (Detailed)
+
+A CS 598 Hardware & Software for AI project at UIUC (Fall 2026) with Sahil Sashi, run on NCSA Delta GPUs with vLLM and Qwen3-8B. Speculative decoding lets a cheap drafter propose several tokens that the target model verifies in one forward pass. The project asks where that stops paying as prompts get longer and the server gets busier. Devansh built the measurement harness and the analysis around a cost model: speedup is roughly [coverage x conditional acceptance + (1 - coverage)] / R, where acceptance belongs to the drafter and R, the verification cost ratio, belongs to the machine.
+
+Findings so far, on A40 GPUs with LongBench-v2 prompts at 2K, 8K and 32K tokens: the ranking of drafters inverts with context. A trained DFlash draft head gives 1.86x at 2K, 1.26x at 8K and 0.83x at 32K, slower than not speculating, while n-gram prompt lookup holds 1.15x, 1.15x and 1.08x. The result replicated on two nodes three days apart to within 0.08%. Fitting R(k) = (1 + R_draft) + c*k showed drafting is 82-86% of DFlash's overhead: long context taxes the drafter's own pass, not verification. He also found that serving engines report acceptance only for steps where a draft was proposed, which overstates a low-coverage drafter by more than 2x unless a coverage term is added. The project keeps a claims-to-evidence register with a falsifier for every claim and records predictions that failed. GitHub: github.com/Devansh63/Speculate-Decoding-Ladder.
+
+---
+
+## How Real People Push Back (Detailed)
+
+A CS 598 HCI group project at UIUC (Fall 2026) on chatbot sycophancy: when a user disagrees with a correct answer, how often does the model give in, and does a response layer that adapts to the type of pushback help? Devansh ran the pilot end to end: 2,040 trials on two DeepSeek V4 models with 60 verified questions and 480 pushback stimuli, analyzed with Wilson intervals and a cluster bootstrap. Caving was near zero (0-8%), but replaying 300 real WildChat pushback cases in their natural conversational context gave 72-78% adoption, matching the published 67-77%, which showed the low rate was a property of the study design rather than the models. Pushback type predicted adoption (bare disagreement 87.7% vs reasoning challenge 63.0%), and reframing the question made caving worse. He also measured a proposed lexical pushback filter on 60,000 WildChat conversations (58.0% precision, 2.0% recall) and reported two instruments that failed validation instead of dropping them. GitHub: github.com/Devansh63/cs598-pushback-test.
 
 ---
 
@@ -415,7 +429,7 @@ A: Email: devanshagrawal63@gmail.com | Phone: (734) 604-6884 | LinkedIn: https:/
 A: It was a deliberate decision, not a reaction to anything going wrong. I could see AI becoming the core of every serious engineering team, and I realized I wanted to be someone who actually builds these systems — not just someone who integrates APIs. I was on an H-1B at OPEXUS, which is a comfortable visa, and choosing to switch to an F-1 for grad school meant removing that safety net entirely. I made that choice because I believed the investment was worth it, and because if I was going to do it, it had to be UIUC — one of the best CS programs in the world. I have no regrets. The coursework, the projects I am building, and the 4.0 GPA tell me I made the right call.
 
 **Q: What are you currently building at UIUC?**
-A: Two main projects right now. First, "Ask Devansh" — a production RAG chatbot using Google Gemini for both embeddings and generation, ChromaDB as the vector store, and Flask for the API. It is deployed at devanshagrawal.netlify.app so recruiters can ask questions about my background in natural language. Second, an Agentic AI system — a multi-agent autonomous AI that I am working on for tool use and task decomposition. Both of these are things I am building because I find them genuinely interesting, not just because they look good on a resume.
+A: Two course research projects this semester. In CS 598 Hardware & Software for AI, Sahil Sashi and I are measuring where speculative decoding stops paying inside vLLM as context and load grow, on Qwen3-8B and NCSA Delta GPUs; the headline is that the trained draft head goes from a 1.86x speedup at 2K tokens of context to 0.83x at 32K, while cheap n-gram lookup still helps. In CS 598 HCI, my group is studying how chatbots respond when users push back on correct answers; replaying 300 real WildChat pushback cases in natural context gave 72-78% adoption, against 0-8% in the scripted design. Outside class: "Ask Devansh" — a production RAG chatbot using Google Gemini for both embeddings and generation, ChromaDB as the vector store, and Flask for the API. It is deployed at devanshagrawal.netlify.app so recruiters can ask questions about my background in natural language. I am also working on an agentic AI system — a multi-agent autonomous AI for tool use and task decomposition. These are things I am building because I find them genuinely interesting, not just because they look good on a resume.
 
 **Q: What is the Ask Devansh chatbot?**
 A: It is a RAG (Retrieval-Augmented Generation) chatbot I built and deployed. It is trained on a detailed knowledge base about my background, experience, and projects. When you ask it a question, it retrieves the most relevant chunks from that knowledge base, and Gemini 2.5 Flash generates an answer in my voice. The stack is Gemini embedding-001 for embeddings, ChromaDB for vector storage, Flask for the API, and it is deployed on Render. The chatbot is live at devanshagrawal.netlify.app and the code is on GitHub at github.com/Devansh63/devansh-rag.
@@ -436,7 +450,7 @@ A: I built a complete Convolutional Neural Network using only NumPy — no PyTor
 A: My suttonRL repo has clean from-scratch implementations of core RL algorithms from Sutton and Barto's textbook — the standard RL reference. So far it covers epsilon-greedy bandits, value iteration on FrozenLake, first-visit Monte Carlo control on Blackjack, SARSA vs Q-learning on CliffWalking, REINFORCE, and DQN. GitHub: github.com/Devansh63/suttonRL.
 
 **Q: What is the library RAG project?**
-A: library-rag-ingest is a full-stack book search and recommendation system I built for CS 410 at UIUC. It ingests book data and 15M reviews from four sources, uses a Groq-powered query classifier to route searches, combines BM25 and semantic search via Reciprocal Rank Fusion, and generates RAG recommendations using llama-3.3-70b-versatile. Deployed on Render with a FastAPI backend and React UI. GitHub: github.com/Devansh63/library-rag-ingest.
+A: library-rag-ingest is a full-stack book search and recommendation system I built with a team of five for CS 410 at UIUC. It covers 962K books and 11M reader reviews, uses a Groq-powered query classifier to route searches, combines BM25 and semantic search via Reciprocal Rank Fusion, and generates RAG recommendations using llama-3.3-70b-versatile. Deployed on Render with a FastAPI backend and React UI. GitHub: github.com/Devansh63/library-rag-ingest.
 
 **Q: What is your portfolio website?**
 A: My portfolio is at devanshagrawal.netlify.app. It includes the Ask Devansh RAG chatbot so visitors can ask questions about my background, experience, and projects in natural language.
