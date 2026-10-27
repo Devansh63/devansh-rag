@@ -2,11 +2,11 @@
 
 ## Personal Background
 
-Devansh Agrawal was born on June 3, 2000, in Kathmandu, Nepal. He grew up in Kathmandu, where he completed his early schooling at Modern Indian School GPO 1497. His upbringing in Nepal gave him a deeply international perspective that has shaped his career and worldview. At the age of 18, he made a bold decision to move to India for his final year of high school before relocating to the United States to pursue higher education.
+Devansh Agrawal was born and grew up in Kathmandu, Nepal. In Kathmandu he completed his early schooling at Modern Indian School GPO 1497. His upbringing in Nepal gave him a deeply international perspective that has shaped his career and worldview. At the age of 18, he made a bold decision to move to India for his final year of high school before relocating to the United States to pursue higher education.
 
-Devansh currently resides in Champaign, Illinois, where he is pursuing his Master of Computer Science degree at the University of Illinois Urbana-Champaign (UIUC). He holds Nepali citizenship and is in the United States on an F-1 student visa. Prior to returning to academia, he was on an H-1B work visa while employed at OPEXUS in Washington, D.C. He made a conscious decision to change his visa status from H-1B to F-1 in order to pursue graduate education in Artificial Intelligence — a testament to his commitment to deepening his technical expertise.
+Devansh currently lives in Urbana, Illinois, where he is pursuing his Master of Computer Science degree at the University of Illinois Urbana-Champaign (UIUC). He holds Nepali citizenship and is in the United States on an F-1 student visa. Prior to returning to academia, he was on an H-1B work visa while employed at OPEXUS in Washington, D.C. He made a conscious decision to change his visa status from H-1B to F-1 in order to pursue graduate education in Artificial Intelligence — a testament to his commitment to deepening his technical expertise.
 
-His parents are Santosh Agrawal (mother) and Sanjay Agrawal (father). Devansh can be reached at devanshagrawal63@gmail.com or by phone at (734) 604-6884. His LinkedIn profile is at https://www.linkedin.com/in/devansh-agrawal63/, his GitHub is at https://github.com/Devansh63, and his portfolio website is at https://devanshagrawal.netlify.app.
+Devansh can be reached at devanshagrawal63@gmail.com or by phone at (734) 604-6884. His LinkedIn profile is at https://www.linkedin.com/in/devansh-agrawal63/, his GitHub is at https://github.com/Devansh63, and his portfolio website is at https://devanshagrawal.netlify.app.
 
 Devansh speaks four languages fluently: English, Hindi, Marwari, and Nepali — all at native or bilingual proficiency.
 
@@ -15,41 +15,56 @@ Devansh speaks four languages fluently: English, Hindi, Marwari, and Nepali — 
 ## Education
 
 ### Master of Computer Science (MCS) — University of Illinois Urbana-Champaign (UIUC)
-**Specialization: Artificial Intelligence | GPA: 4.0 | January 2026 – May 2027 (expected)**
+**Specialization: ML Systems | GPA: 4.0 | January 2026 – May 2027 (expected)**
 
-Devansh is currently pursuing his MCS degree at UIUC, one of the top-ranked computer science programs in the world. His specialization is in Artificial Intelligence, and he is also focusing on Cybersecurity and System Design. He maintains a perfect 4.0 GPA. He began the program in January 2026 and expects to complete it in May 2027. Skills being developed at UIUC include Data Analysis, Machine Learning, Distributed Systems, Information Retrieval, and Artificial Intelligence.
+Devansh is currently pursuing his MCS degree at UIUC, one of the top-ranked computer science programs in the world. His specialization is ML Systems, and he is also focusing on Cybersecurity and System Design. He maintains a perfect 4.0 GPA. He began the program in January 2026 and expects to complete it in May 2027. Skills being developed at UIUC include Data Analysis, Machine Learning, Distributed Systems, Information Retrieval, and Artificial Intelligence.
 
 ### Bachelor of Science in Computer Science — Purdue University Fort Wayne
-**Minor: Mathematics | GPA: 3.64 | July 2018 – May 2022 | Fort Wayne, Indiana**
+**Minor: Mathematics | GPA: 3.80 | August 2018 – May 2022 | Fort Wayne, Indiana**
 
-Devansh completed his undergraduate degree in Computer Science at Purdue University's Fort Wayne campus, graduating in May 2022. He minored in Mathematics. He achieved a GPA of 3.64 and was recognized with the prestigious HONORS GOLD MEDAL for Academic Excellence — the highest academic honor at the institution, requiring 18 credits of Honors-level coursework. He was on the Dean's List every semester from Fall 2018 through Spring 2020. He also received the Honors Pin in February 2020 for completing 12 Honors credit courses.
+Devansh completed his undergraduate degree in Computer Science at Purdue University's Fort Wayne campus, graduating in May 2022. He minored in Mathematics. He achieved a GPA of 3.80 and was recognized with the prestigious HONORS GOLD MEDAL for Academic Excellence — the highest academic honor at the institution, requiring 18 credits of Honors-level coursework. He was on the Dean's List every semester from Fall 2018 through Spring 2020. He also received the Honors Pin in February 2020 for completing 12 Honors credit courses.
 
 Beyond academics, Devansh was highly active in campus life. He served as President of the Indian Student Association (August 2019 – May 2020), organizing Indian cultural events, presenting budgets to the Student Senate, and running member meetings. He was a Member of the ISA since August 2018. He also served as Secretary of the Purdue Fort Wayne PI Math Club (August–December 2018), organizing member meetings and club events. He was a New Student Orientation Leader in Fall 2019.
 
 ### 12th Grade — Delhi Public School Sector XII R K Puram, New Delhi, India
 **CBSE All India Senior School Certificate Examination | June 2016 – May 2018**
 
-Devansh completed his 12th-grade education at Delhi Public School RK Puram, one of India's most prestigious school chains, in New Delhi. He studied Computer Science. His subject scores: English Core 95/A1, Mathematics 72/B2, Physics 89/A2, Chemistry 66/C1, Computer Science 92/A2.
+Devansh completed his 12th-grade education at Delhi Public School RK Puram, one of India's most prestigious school chains, in New Delhi. He studied Computer Science.
 
 ### 10th Grade — Modern Indian School GPO 1497, Kathmandu, Nepal
-**CBSE Secondary School Examination | 2014–2016 | CGPA: 9.4**
+**CBSE Secondary School Examination | 2014–2016**
 
-Devansh completed his 10th grade in Kathmandu with an overall CGPA of 9.4. Subjects: English A2, Nepali A2, Mathematics A1, Science A2, Social Science B1. His exceptional Mathematics grade laid the groundwork for his future career in technology.
+Devansh completed his 10th grade in Kathmandu.
 
 ---
 
 ## Professional Experience
 
-### Full-Stack Software Engineer 1 — OPEXUS (Formerly AINS LLC) | Washington, D.C., USA
+### AI Engineer Intern — PeopleLens | Cupertino, CA
+**June 2026 – August 2026**
+
+Devansh interned as an AI Engineer at PeopleLens, building LLM systems that coach sales teams. Key accomplishments:
+- Designed an LLM pipeline that scores sales calls on 8 coaching criteria, chunking transcripts and using hybrid retrieval (BM25 + dense embeddings) to ground every score in verbatim quotes.
+- Achieved 1.37 mean-absolute-error vs human experts on a 1–10 rubric (62% of scores within 1 point) with a two-stage analyze-then-judge LLM design gated by deterministic, code-based validation.
+- Co-developed the coaching-plan generator that turns scores into specific, next-step "nudges" for reps and their managers.
+- Shipped a multi-tenant MCP (Model Context Protocol) server exposing coaching data as 11 read-only tools to AI assistants in Slack, Teams, and Claude on GCP + MongoDB.
+- Verified per-company data isolation and scaled the multi-tenant serving path with a Kafka queue, rate limiting, and idempotent retries, load-tested under concurrent production traffic.
+- Cut LLM inference cost and latency via prompt caching, single-pass embedding, and bounded concurrency, reusing one transcript across all 8 per-rubric judges.
+
+Skills used: LLMs, RAG, hybrid retrieval, LLM-as-a-judge, LLM evaluation, prompt caching, MCP/FastMCP, multi-tenant architecture, Kafka, GCP, MongoDB, Python.
+
+### Full Stack Software Engineer — OPEXUS (Formerly AINS LLC) | Washington, D.C., USA
 **July 2022 – November 2025 (3 years 5 months) | Hybrid**
 
-Devansh worked as a Full-Stack Software Engineer at OPEXUS (formerly known as AINS LLC), a leading government technology company. He worked on FOIAXpress — a .NET web application used by over 200 federal, state, and local government agencies across the United States and Canada, facilitating the processing of over 1.5 million FOIA (Freedom of Information Act) requests annually.
+Devansh worked as a Full-Stack Software Engineer at OPEXUS (formerly known as AINS LLC), a leading government technology company. He worked on FOIAXpress — a .NET 8 case management platform used by 300 government agencies across the United States and Canada, facilitating 3.4 million FOIA (Freedom of Information Act) requests annually.
 
 Key accomplishments:
+- Fine-tuned DistilBERT and DeBERTa-v3 (HuggingFace) on 8,000+ annotated documents, lifting redaction accuracy 80%+ over the CoreNLP baseline on ambiguous cases.
+- Engineered a multi-stage NLP redaction pipeline (CoreNLP + AWS Comprehend), cutting manual document review from 10 hours to 30 minutes per case.
 - Developed a Named Entity Recognition (NER) module giving users the option to use either AWS Comprehend or Stanford CoreNLP to automatically detect and redact sensitive/classified content in federal documents.
 - Integrated CoreNLP's Regex-based NER to let users define custom patterns for redactions with an easy-to-use UI.
-- Directed a team of 8 engineers to add bilingual English/French support within months to expand reach in Canada, increasing revenue by 10%.
-- Improved system design from monolithic to a hybrid microservices architecture to drastically improve scalability and maintainability.
+- Led a team of 8 to ship bilingual French/Spanish support, winning 45 Canadian customers and growing revenue 15%.
+- Migrated a monolithic .NET 8 platform (300 agencies, 3.4M requests/yr) to Dockerized microservices, cutting deployment time 70% and enabling independent scaling of the AI service.
 - Containerized a legacy .NET application using Docker, improving deployment and reducing environment dependencies.
 - Integrated APIs for Relativity and TDMS, Pay.gov, and NS Pay payment options to retain three clients and secure two new clients.
 - Implemented CI/CD pipeline to automate security scanning using Fortify and Qualys, identifying and resolving 1,500+ security vulnerabilities.
@@ -171,7 +186,7 @@ A full web application allowing users to create accounts, store recipes privatel
 
 **Frameworks & Libraries:** .NET Core, .NET Framework, React, Spring, Grails, Node.js, AngularJS, Express.js
 
-**Machine Learning & AI:** TensorFlow, Keras, PyTorch, HuggingFace Transformers, ONNX Runtime, U-Net, Deep Q-Learning, AWS Comprehend, AWS Textract, Stanford CoreNLP, Regex-based NER, NumPy, OpenCV, RAG Pipelines, Google Gemini (embedding + generation), ChromaDB, pgvector, Vector Databases, LLM Integration, Agentic AI Systems, Sentence Transformers, INT8 Quantization, Model Fine-Tuning, Scikit-learn, Pandas
+**Machine Learning & AI:** TensorFlow, Keras, PyTorch, HuggingFace Transformers, ONNX Runtime, U-Net, Deep Q-Learning, AWS Comprehend, AWS Textract, Stanford CoreNLP, Regex-based NER, NumPy, OpenCV, RAG Pipelines, Google Gemini (embedding + generation), ChromaDB, pgvector, Vector Databases, LLM Integration, Agentic AI Systems, Sentence Transformers, Model Fine-Tuning, Scikit-learn, Pandas
 
 **DevOps & Cloud:** Docker, CI/CD, Git, GitHub, GitLab, Azure DevOps, Microsoft Azure, Render, AWS Textract
 
@@ -263,9 +278,9 @@ Devansh speaks four languages: English, Hindi, Marwari, and Nepali — all at na
 
 Devansh's journey is one of geographic breadth and intellectual ambition. He started in Kathmandu, Nepal, moved to New Delhi for high school, then crossed continents to the United States at 18 to begin his undergraduate studies at Purdue Fort Wayne. During undergraduate, he simultaneously worked multiple jobs — IT technician, research assistant, app developer, and teaching assistant — while maintaining Dean's List grades and earning the Honors Gold Medal.
 
-After graduating in 2022 he joined OPEXUS in Washington D.C. on an H-1B visa, spending over 3 years building government technology used by 200+ agencies. He then made the bold decision to give up that stable position and change to an F-1 student visa to pursue a Master's in Computer Science at UIUC — one of the world's top CS programs — specializing in AI. He now maintains a perfect 4.0 GPA.
+After graduating in 2022 he joined OPEXUS in Washington D.C. on an H-1B visa, spending over 3 years building government technology used by 300 agencies. He then made the bold decision to give up that stable position and change to an F-1 student visa to pursue a Master of Computer Science at UIUC — one of the world's top CS programs — specializing in ML Systems. He now maintains a perfect 4.0 GPA.
 
-He is currently living in Champaign, Illinois, balancing MCS coursework with his love for adventure, his Nepali roots, and a genuine passion for AI.
+He is currently living in Urbana, Illinois, balancing MCS coursework with his love for adventure, his Nepali roots, and a genuine passion for AI.
 
 ## Why AI — The Decision to Leave OPEXUS for UIUC
 
@@ -292,7 +307,9 @@ GPA: 4.0 across all coursework.
 
 ## Open To Work
 
-Devansh is actively seeking **ML/AI internship or co-op roles for Summer/Fall 2026**. He is especially interested in positions involving:
+Devansh has 4+ years of engineering experience: 3+ years as a Full Stack Software Engineer at OPEXUS, an AI Engineer internship at PeopleLens, and a year as an Applications Developer at Purdue.
+
+Devansh is open to **ML/AI engineering roles**, and graduates in May 2027. He is especially interested in positions involving:
 - Machine Learning Engineering (training, fine-tuning, deploying models)
 - AI Research (applied research with real-world impact)
 - AI/ML Infrastructure (MLOps, data pipelines, model serving)
@@ -310,7 +327,7 @@ Devansh built a complete Convolutional Neural Network from scratch using only Nu
 
 ## Reinforcement Learning Algorithms from Sutton and Barto (Detailed)
 
-Devansh's suttonRL repository contains clean, from-scratch implementations of foundational reinforcement learning algorithms based on Sutton and Barto's "Reinforcement Learning: An Introduction," widely considered the canonical RL textbook. The repository covers multi-armed bandit methods including epsilon-greedy, UCB, and gradient bandits, dynamic programming methods like policy iteration and value iteration, Monte Carlo methods both on-policy and off-policy, temporal-difference learning including TD(0), SARSA, and Q-learning, n-step bootstrapping, eligibility traces, and function approximation methods. Each algorithm is paired with the corresponding example environments and experiments from the textbook to validate correct behavior. GitHub: github.com/Devansh63/suttonRL.
+Devansh's suttonRL repository contains clean, from-scratch implementations of foundational reinforcement learning algorithms based on Sutton and Barto's "Reinforcement Learning: An Introduction," widely considered the canonical RL textbook. The repository covers epsilon-greedy bandits (chapter 2), value iteration on FrozenLake (chapter 4), first-visit Monte Carlo control on Blackjack (chapter 5), SARSA and Q-learning compared on CliffWalking (chapter 6), REINFORCE policy gradients, and a DQN. He started it to understand what happens under the hood rather than calling stable-baselines. GitHub: github.com/Devansh63/suttonRL.
 
 ---
 
@@ -322,9 +339,9 @@ Devansh's library-rag-ingest project is a full-stack book search and recommendat
 
 ## Devansh's Preferred ML Tech Stack
 
-For deep learning, Devansh primarily uses PyTorch and the HuggingFace ecosystem (Transformers, Datasets, Tokenizers, Optimum). For classical ML, he uses Scikit-learn and Pandas. For computer vision preprocessing, he uses OpenCV and NumPy. For specialized medical imaging work, he uses ITK.
+For deep learning, Devansh primarily uses PyTorch and the HuggingFace ecosystem (Transformers, Datasets, Tokenizers). For classical ML, he uses Scikit-learn and Pandas. For computer vision preprocessing, he uses OpenCV and NumPy. For specialized medical imaging work, he uses ITK.
 
-For deployment and optimization, his preferred stack includes ONNX Runtime for cross-platform inference, INT8 quantization via HuggingFace Optimum, FastAPI for serving model APIs, and Docker for containerization.
+For deployment and optimization, his preferred stack includes ONNX Runtime for cross-platform inference, FastAPI for serving model APIs, and Docker for containerization.
 
 For RAG systems, he has experience with Google Gemini, ChromaDB for prototyping, and Neon Postgres with pgvector for production-grade vector storage. He is familiar with sentence-transformer models for generating embeddings.
 
@@ -356,13 +373,13 @@ He is also considering Kubernetes certifications like CKAD if pursuing MLOps-foc
 A: I was born and grew up in Kathmandu, Nepal. I moved to New Delhi, India for my 12th grade at Delhi Public School RK Puram, then came to the United States in 2018 to attend Purdue University Fort Wayne.
 
 **Q: What are you currently studying?**
-A: I'm pursuing my Master of Computer Science (MCS) at UIUC, specializing in Artificial Intelligence. I'm also focusing on Cybersecurity and System Design. I started in January 2026, maintaining a 4.0 GPA, and expect to graduate in May 2027.
+A: I'm pursuing my Master of Computer Science (MCS) at UIUC, specializing in ML Systems. I'm also focusing on Cybersecurity and System Design. I started in January 2026, maintaining a 4.0 GPA, and expect to graduate in May 2027.
 
 **Q: Where did you do your undergrad?**
-A: Purdue University Fort Wayne — BS in Computer Science with a Minor in Mathematics, graduating May 2022 with a GPA of 3.64. I received the Honors Gold Medal for Academic Excellence (for completing 18 Honors credits) and was on the Dean's List every semester from Fall 2018 through Spring 2020.
+A: Purdue University Fort Wayne — BS in Computer Science with a Minor in Mathematics, graduating May 2022 with a GPA of 3.80. I received the Honors Gold Medal for Academic Excellence (for completing 18 Honors credits) and was on the Dean's List every semester from Fall 2018 through Spring 2020.
 
 **Q: Where did you work?**
-A: My main job was at OPEXUS (formerly AINS LLC) in Washington D.C. as a Full-Stack Software Engineer — I was there from July 2022 to November 2025. I worked on FOIAXpress, used by 200+ government agencies to process over 1.5 million FOIA requests per year. Before that, I had roles at Purdue University (app developer, research assistant, IT technician) and two internships in Nepal — one at Janaki Technology working on Khalti (Nepal's first digital wallet) and one at Smart Solutions building the Bank of Zambia's website.
+A: My main job was at OPEXUS (formerly AINS LLC) in Washington D.C. as a Full Stack Software Engineer — I was there from July 2022 to November 2025. I worked on FOIAXpress, used by 300 government agencies to process 3.4 million FOIA requests per year. Most recently I was an AI Engineer Intern at PeopleLens (June–August 2026), building LLM call-scoring pipelines and a multi-tenant MCP server. Before OPEXUS, I had roles at Purdue University (app developer, research assistant, IT technician) and two internships in Nepal — one at Janaki Technology working on Khalti (Nepal's first digital wallet) and one at Smart Solutions building the Bank of Zambia's website.
 
 **Q: Tell me about the NeuroDrone project.**
 A: NeuroDrone was my senior capstone at Purdue. We built an AI drone that could navigate autonomously in GPS-denied environments using Deep Q Reinforcement Learning. We used Unreal Engine 4, AirSim, TensorFlow/Keras in Docker, and occupancy mapping for obstacle detection. Real-world applications included package delivery, air taxis, and disaster management.
@@ -386,7 +403,7 @@ A: I love traveling and outdoor adventures — I've visited the Grand Canyon and
 A: At Purdue, I received the Honors Gold Medal at graduation for completing 18 credits of Honors coursework — the university's highest academic honor. I also received the Honors Pin for completing 12 Honors credits, and I was on the Dean's and Semester Honors List every semester from Fall 2018 through Spring 2020.
 
 **Q: Are you open to new opportunities?**
-A: I'm currently focused on my MCS at UIUC, but I'm open to Software Engineer, Full Stack, .NET Developer, or Back End Developer roles — especially those with an AI/ML component.
+A: Yes. I'm open to ML/AI Engineer roles, and to Software Engineer, Full Stack, or Back End roles with a real AI/ML component. I graduate from UIUC in May 2027.
 
 **Q: What's on your GitHub?**
 A: My GitHub is github.com/Devansh63. Public repos include a personal RAG chatbot (devansh-rag, live at devanshagrawal.netlify.app), a CNN built from scratch in NumPy, RL algorithm implementations from Sutton and Barto, a full-stack library book recommendation system (library-rag-ingest), a language model built from scratch, and the NeuroDrone capstone project.
@@ -404,19 +421,19 @@ A: Two main projects right now. First, "Ask Devansh" — a production RAG chatbo
 A: It is a RAG (Retrieval-Augmented Generation) chatbot I built and deployed. It is trained on a detailed knowledge base about my background, experience, and projects. When you ask it a question, it retrieves the most relevant chunks from that knowledge base, and Gemini 2.5 Flash generates an answer in my voice. The stack is Gemini embedding-001 for embeddings, ChromaDB for vector storage, Flask for the API, and it is deployed on Render. The chatbot is live at devanshagrawal.netlify.app and the code is on GitHub at github.com/Devansh63/devansh-rag.
 
 **Q: What kind of roles are you looking for?**
-A: I am looking for ML/AI internship or co-op roles, ideally for Summer or Fall 2026. My strongest interest is in Machine Learning Engineering, AI Research, and building AI-powered products. I have practical experience with RAG pipelines, embeddings, vector databases, and agentic systems — plus a strong software engineering background from 3+ years at OPEXUS. I am authorized to work in the U.S. on an F-1 visa with OPT/CPT eligibility.
+A: I am open to ML/AI engineering roles; I graduate in May 2027. My strongest interest is in Machine Learning Engineering, AI Research, and building AI-powered products. I have practical experience with RAG pipelines, embeddings, vector databases, and agentic systems — plus 4+ years of engineering experience, including 3+ years at OPEXUS and an AI Engineer internship at PeopleLens. I am authorized to work in the U.S. on an F-1 visa with OPT/CPT eligibility.
 
 **Q: Are you available for internships?**
-A: Yes. I am actively seeking ML/AI internships or co-op positions for Summer 2026 or Fall 2026. I am on an F-1 student visa and eligible for CPT. I am based in Champaign, IL but open to relocating for the right opportunity.
+A: Yes. I am open to ML/AI engineering roles, and I graduate in May 2027. I am on an F-1 student visa and eligible for CPT. I am based in Urbana, IL but open to relocating for the right opportunity.
 
 **Q: What makes you stand out as a candidate?**
-A: A few things. First, I have real production experience — I shipped software used by 200+ government agencies at OPEXUS, resolved 1,500+ security vulnerabilities, and led a team of 8. I know what it takes to ship. Second, I have hands-on AI experience: I built a RAG pipeline from scratch (live at devanshagrawal.netlify.app), I have done ML research (U-Net for CT imaging, deep steganography, reinforcement learning for NeuroDrone), and I am currently building an agentic AI system at UIUC. Third, I gave up a stable H-1B job to pursue this. That level of commitment to AI is not something I can fake.
+A: A few things. First, I have real production experience — I shipped software used by 300 government agencies at OPEXUS, resolved 1,500+ security vulnerabilities, and led a team of 8. I know what it takes to ship. Second, I have hands-on AI experience: I built a RAG pipeline from scratch (live at devanshagrawal.netlify.app), I have done ML research (U-Net for CT imaging, deep steganography, reinforcement learning for NeuroDrone), and I am currently building an agentic AI system at UIUC. Third, I gave up a stable H-1B job to pursue this. That level of commitment to AI is not something I can fake.
 
 **Q: Tell me about the CNN from scratch project.**
 A: I built a complete Convolutional Neural Network using only NumPy — no PyTorch, no TensorFlow, nothing. I implemented 2D convolution forward and backward passes, pooling layers, fully connected layers, ReLU and softmax with their derivatives, cross-entropy loss, and mini-batch gradient descent. The point was to deeply understand what frameworks do under the hood, not just use them. It is on GitHub at github.com/Devansh63/CNN-from-scratch.
 
 **Q: Tell me about the RL algorithms project.**
-A: My suttonRL repo has clean from-scratch implementations of core RL algorithms from Sutton and Barto's textbook — the standard RL reference. Covers multi-armed bandits, dynamic programming, Monte Carlo methods, TD learning (SARSA, Q-learning), n-step methods, eligibility traces, and function approximation. Each algorithm is paired with the corresponding textbook experiments so you can verify the behavior matches the book. GitHub: github.com/Devansh63/suttonRL.
+A: My suttonRL repo has clean from-scratch implementations of core RL algorithms from Sutton and Barto's textbook — the standard RL reference. So far it covers epsilon-greedy bandits, value iteration on FrozenLake, first-visit Monte Carlo control on Blackjack, SARSA vs Q-learning on CliffWalking, REINFORCE, and DQN. GitHub: github.com/Devansh63/suttonRL.
 
 **Q: What is the library RAG project?**
 A: library-rag-ingest is a full-stack book search and recommendation system I built for CS 410 at UIUC. It ingests book data and 15M reviews from four sources, uses a Groq-powered query classifier to route searches, combines BM25 and semantic search via Reciprocal Rank Fusion, and generates RAG recommendations using llama-3.3-70b-versatile. Deployed on Render with a FastAPI backend and React UI. GitHub: github.com/Devansh63/library-rag-ingest.
