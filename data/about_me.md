@@ -17,7 +17,7 @@ Devansh speaks four languages fluently: English, Hindi, Marwari, and Nepali — 
 ### Master of Computer Science (MCS) — University of Illinois Urbana-Champaign (UIUC)
 **Specialization: ML Systems | GPA: 4.0 | January 2026 – May 2027 (expected)**
 
-Devansh is currently pursuing his MCS degree at UIUC, one of the top-ranked computer science programs in the world. His specialization is ML Systems, and he is also focusing on Cybersecurity and System Design. He maintains a perfect 4.0 GPA. He began the program in January 2026 and expects to complete it in May 2027. Skills being developed at UIUC include Data Analysis, Machine Learning, Distributed Systems, Information Retrieval, and Artificial Intelligence.
+Devansh is currently pursuing his MCS degree at UIUC, one of the top-ranked computer science programs in the world. His specialization is ML Systems. He maintains a perfect 4.0 GPA. He began the program in January 2026 and expects to complete it in May 2027. Skills being developed at UIUC include Data Analysis, Machine Learning, Distributed Systems, Information Retrieval, and Artificial Intelligence.
 
 ### Bachelor of Science in Computer Science — Purdue University Fort Wayne
 **Minor: Mathematics | GPA: 3.80 | August 2018 – May 2022 | Fort Wayne, Indiana**
@@ -292,16 +292,21 @@ The honest answer is that he could feel the field shifting. During his time at O
 
 The decision was deliberate. He researched programs, applied selectively, and chose UIUC specifically because of its depth in ML and systems — and because he knew that if he was going to do this, it had to be a program worth giving up an H-1B for. He is not hedging. He changed his visa status from H-1B to F-1 — a move that removed the safety net — because he is fully committed to the AI path.
 
-At UIUC he has maintained a 4.0 GPA while building real projects: a production RAG chatbot at devanshagrawal.netlify.app, an agentic AI system, a GPU study of speculative decoding in vLLM, a study of how chatbots respond to user pushback, and taking courses in Machine Learning, Distributed Systems, Information Retrieval, and Cybersecurity. He is not studying AI in the abstract — he is building things with it.
+At UIUC he has maintained a 4.0 GPA while building real projects: a production RAG chatbot at devanshagrawal.netlify.app, an agentic AI system, a GPU study of speculative decoding in vLLM, a study of how chatbots respond to user pushback, and taking courses in Machine Learning, Distributed Systems, Text Information Systems, Natural Language Processing, Hardware & Software for AI, and Human-Centered AI. He is not studying AI in the abstract — he is building things with it.
 
 ## UIUC Coursework Details
 
-Devansh is pursuing his MCS at UIUC starting January 2026, expected graduation May 2027. Relevant completed and in-progress courses:
-- **Machine Learning** — core ML algorithms, statistical learning theory, model evaluation
-- **Distributed Systems** — fault tolerance, consensus, scalability, system design at scale
-- **Information Retrieval** — search systems, ranking, vector search, relevance
-- **Cybersecurity** — applied security, threat modeling, vulnerability analysis
-- **System Design** — large-scale system architecture, trade-offs, real-world engineering decisions
+Devansh is pursuing his MCS at UIUC starting January 2026, expected graduation May 2027.
+
+Completed, Spring 2026:
+- **CS 410 Text Information Systems**: search, ranking and text retrieval. His team built the library RAG book search system in this course.
+- **CS 425 Distributed Systems**: fault tolerance, consensus and replication.
+- **CS 446 Machine Learning**: core ML algorithms and model evaluation; mini-torch, his autograd engine, came from this course.
+
+In progress, Fall 2026:
+- **CS 447 Natural Language Processing**
+- **CS 598 Hardware & Software for AI**: his Speculation Ladder project on speculative decoding in vLLM.
+- **CS 598 Human-Centered AI**: his team's study of how chatbots respond when users push back.
 
 GPA: 4.0 across all coursework.
 
@@ -389,7 +394,7 @@ He is also considering Kubernetes certifications like CKAD if pursuing MLOps-foc
 A: I was born and grew up in Kathmandu, Nepal. I moved to New Delhi, India for my 12th grade at Delhi Public School RK Puram, then came to the United States in 2018 to attend Purdue University Fort Wayne.
 
 **Q: What are you currently studying?**
-A: I'm pursuing my Master of Computer Science (MCS) at UIUC, specializing in ML Systems. I'm also focusing on Cybersecurity and System Design. I started in January 2026, maintaining a 4.0 GPA, and expect to graduate in May 2027.
+A: I'm pursuing my Master of Computer Science (MCS) at UIUC, specializing in ML Systems. This semester I'm taking Natural Language Processing, Hardware & Software for AI, and Human-Centered AI. I started in January 2026, maintaining a 4.0 GPA, and expect to graduate in May 2027.
 
 **Q: Where did you do your undergrad?**
 A: Purdue University Fort Wayne — BS in Computer Science with a Minor in Mathematics, graduating May 2022 with a GPA of 3.80. I received the Honors Gold Medal for Academic Excellence (for completing 18 Honors credits) and was on the Dean's List every semester from Fall 2018 through Spring 2020.
